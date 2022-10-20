@@ -16,12 +16,7 @@
 	<properties>
 		<java.version>15</java.version>
 	</properties>
-	<distributionManagement>
-             <snapshotRepository>
-               <id>nexus-snapshots</id>
-               <url>http://192.168.50.148:8081/repository/skander</url>
-             </snapshotRepository>
-       </distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -74,5 +69,11 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+             <snapshotRepository>
+               <id>skander</id>
+               <url>http://192.168.50.148:8081/repository/skander</url>
+             </snapshotRepository>
+       </distributionManagement>
 
 </project>
