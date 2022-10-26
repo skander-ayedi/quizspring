@@ -14,7 +14,7 @@
 	<name>SpringBootQuizApp</name>
 	<description>Simple quiz application using Spring Boot &amp; MySQL</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>11</java.version>
 	</properties>
 	
 	<dependencies>
@@ -71,7 +71,7 @@
 	</build>
 	<distributionManagement>
              <snapshotRepository>
-               <id>skander</id>
+               <id>admin</id>
                <url>http://192.168.50.148:8081/repository/skander</url>
              </snapshotRepository>
        </distributionManagement>
