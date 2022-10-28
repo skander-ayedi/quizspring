@@ -69,11 +69,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-             <snapshotRepository>
-               <id>admin</id>
-               <url>http://192.168.50.148:8081/repository/skander</url>
-             </snapshotRepository>
-       </distributionManagement>
+	
 
 </project>
