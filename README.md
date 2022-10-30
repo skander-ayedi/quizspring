@@ -26,5 +26,5 @@ This project was made as a part of my channel's Spring Boot Tutorial series in B
 ![Score Board](https://raw.githubusercontent.com/DevRezaur/spring-boot-quiz-app/main/screenshots/Score%20Board.PNG)
 
 ---
-
+exa
 ### Have a nice day
