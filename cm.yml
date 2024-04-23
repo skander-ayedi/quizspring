@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: mysql-config
 data:
-  postgres-url: jdbc:mysql://192.168.50.147:3306/quiz_db
-  postgres-db: quiz_db
+  url: jdbc:mysql://192.168.50.147:3306/quiz_db
+
