@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mysql-config
+  name: mysqlconfig
 data:
-  url: jdbc:mysql://192.168.50.147:3306/quiz_db
+        url: jdbc:mysql://avnadmin:AVNS_xEfF7a0lyejaFtc-GG-@mysql-bd99b16-ayediskander2-be5f.e.aivencloud.com:21797/defaultdb
 
