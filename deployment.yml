@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dep-app
+  name: depapp
 spec:
   replicas: 2
   selector:
@@ -14,14 +14,28 @@ spec:
     spec:
       containers:
         - name: app
-          image: skander:latest
+          image: skander2/skander:latest
           ports:
             - containerPort: 8080
           env:
-            - name: MONGO_URL
-              value: "jdbc:mysql://192.168.50.147:3306/quiz_db" 
-            - name: KUBERNETES_ENV
-              value: "true"
+          - name: USER
+            valueFrom:
+              secretKeyRef:
+                name: mysqlsecret
+                key: user
+          - name: PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysqlsecret
+                key: password
+
+          - name: URL
+            valueFrom:
+              configMapKeyRef:
+                name: mysqlconfig
+                key: url
+  
+
 ---
 apiVersion: v1
 kind: Service
@@ -35,4 +49,17 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      #nodePort: 31000
+      nodePort: 31500
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appclusterip
+spec:
+  selector:
+    app: app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
